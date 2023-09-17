@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Player</title>
+</head>
+<body>
+    <h1>Audio Player</h1>
+    
+    <!-- Text Box -->
+    <label for="text-input">Enter Text:</label>
+    <input type="text" id="text-input" placeholder="Type something...">
+
+    <!-- Button -->
+    <button id="play-button">Play Audio</button>
+
+    <!-- Audio Player -->
+    <audio id="audio-player" controls>
+        <source src="your_audio_file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // JavaScript code can be added here for functionality
+        document.getElementById("play-button").addEventListener("click", function() {
+            // Get the text from the input field
+            var text = document.getElementById("text-input").value;
+            
+            // You can use this text to generate audio dynamically using a text-to-speech API or similar.
+            // For now, let's set a sample audio source for demonstration purposes.
+            document.getElementById("audio-player").src = "sample_audio.mp3";
+        });
+    </script>
+</body>
+</html>
